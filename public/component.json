@@ -5,7 +5,7 @@
     "jquery":null,
     "backbone":"http://backbonejs.org/backbone.js",
     "underscore":"http://underscorejs.org/underscore.js",
-    "backbone.paginator":"https://raw.github.com/addyosmani/backbone.paginator/master/dist/backbone.paginator.js",
+    "backbone.paginator":"https://raw.github.com/addyosmani/backbone.paginator/master/lib/backbone.paginator.js",
     "requirejs":"http://requirejs.org/docs/release/2.1.4/minified/require.js",
     "text":"https://raw.github.com/requirejs/text/latest/text.js"
   }

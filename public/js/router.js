@@ -8,9 +8,9 @@ define([
   return Backbone.Router.extend({
 
         routes:{
-                
-            ''     : 'root',
-            'test' : 'getTest'
+
+            ''      : 'root',
+            'login' : 'getLogin'
         }
-  	});
+      });
 });

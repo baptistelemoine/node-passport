@@ -1,16 +1,32 @@
 define([
   'jquery',
   'underscore',
-  'backbone'  
+  'backbone',
+  'router',
+  'views/LoginView'
 
-], function ($, _, Backbone){
-	
-	return Backbone.View.extend({	
-		
-		initialize:function(){			
-			
+], function ($, _, Backbone, AppRouter, LoginView){
+
+	return Backbone.View.extend({
+
+		$container:$('#wrapper'),
+
+		initialize:function(){
+
+			_.bindAll(this, 'login');
+
+			var router = new AppRouter();
+			router.on('route:getLogin', this.login);
+			Backbone.history.start({pushState:true});
+
 		},
-		
+
+		login:function(){
+			var login = new LoginView();
+			this.$container.append(login.render().el);
+		}
+
+
 	});
 
 });
