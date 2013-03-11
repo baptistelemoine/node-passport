@@ -8,9 +8,9 @@ define([
     ], function ($, _, Backbone, LoginTemplate, AppRouter) {
 
     return Backbone.View.extend({
-        
+
         initialize:function(options) {
-          
+
           _.bindAll(this, 'render', 'onSubmit');
 
         },
@@ -27,9 +27,17 @@ define([
         },
 
         onSubmit:function(e){
-			e.preventDefault();
-			var router = new AppRouter();
-			router.navigate('/login', {trigger:true, replace:true});
+
+            e.preventDefault();
+
+            /*
+            var model = new Backbone.Model();
+            model.url = '/login';
+            _.each(this.$("input,select,textarea").not("[type=submit]"), function (value, index){
+                model.set($(value).attr('id'),$(value).val());
+            });
+            model.save();
+            */
         }
 
     });

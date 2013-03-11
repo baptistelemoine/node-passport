@@ -17,7 +17,7 @@ define([
 
 			var router = new AppRouter();
 			router.on('route:getLogin', this.login);
-			Backbone.history.start({pushState:true});
+			Backbone.history.start({pushState:false});
 
 		},
 
